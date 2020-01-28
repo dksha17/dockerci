@@ -3,7 +3,7 @@ pipeline {
     ansiColor('xterm')
   }   
   environment {
-    registry           = "hub.docker.com/repository/docker/deeksha17/java"
+    registry           = "deeksha17/java"
     registryCredential = 'docker-hub'
     dockerImage        = ''
   }
@@ -20,7 +20,7 @@ pipeline {
     stage('push Image to acr') {
       steps{
         script {
-          docker.withRegistry( 'https://' + registry, registryCredential ) {
+          docker.withRegistry( '', registryCredential ) {
           dockerImage.push()
           }
         }
