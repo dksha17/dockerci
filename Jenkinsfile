@@ -4,7 +4,7 @@ pipeline {
   }   
   environment {
     registry           = "hub.docker.com/dksha17/java"
-    registryCredential = 'Chandigarh@1'
+    registryCredential = 'docker-hub'
     dockerImage        = ''
   }
   agent any
