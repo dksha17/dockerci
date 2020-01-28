@@ -3,7 +3,7 @@ pipeline {
     ansiColor('xterm')
   }   
   environment {
-    registry           = "hub.docker.com/dksha17/java"
+    registry           = "hub.docker.com/repository/docker/deeksha17/java"
     registryCredential = 'docker-hub'
     dockerImage        = ''
   }
