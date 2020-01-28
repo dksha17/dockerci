@@ -12,7 +12,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage = docker.build(registry + "java11.x", "-f Dockerfile .")
+          dockerImage = docker.build(registry + "java", "-f Dockerfile .")
         }
       }
     }
