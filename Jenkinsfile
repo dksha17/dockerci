@@ -3,7 +3,7 @@ pipeline {
     ansiColor('xterm')
   }   
   environment {
-    registry           = "hub.docker.com/dksha17/"
+    registry           = "hub.docker.com/dksha17/java"
     registryCredential = 'Chandigarh@1'
     dockerImage        = ''
   }
@@ -12,7 +12,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage = docker.build(registry + "java", "-f Dockerfile .")
+          dockerImage = docker.build(registry , "-f Dockerfile .")
         }
       }
     }
